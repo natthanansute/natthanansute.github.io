@@ -60,16 +60,3 @@ PF/
 
 ---
 
-## 🌐 ขั้นตอนการนำขึ้น GitHub Pages (`username.github.io`)
-
-1. สร้าง Repository ใหม่บน GitHub โดยตั้งชื่อว่า `<username>.github.io`
-2. เปิด Terminal หรือ PowerShell ที่โฟลเดอร์นี้ แล้วรันคำสั่ง:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio release"
-   git branch -M main
-   git remote add origin https://github.com/<username>/<username>.github.io.git
-   git push -u origin main
-   ```
-3. รอระบบประมวลผล 1-2 นาที เว็บไซต์จะออนไลน์ทันทีที่ `https://<username>.github.io`
