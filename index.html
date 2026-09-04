@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Natthanan Sutenan</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- PORTFOLIO CONTAINER หลัก -->
+    <div class="container" id="portfolioContainer">
+        <header>
+            <h1 class="name" id="profileName" data-original="Natthanan Sutenan">Natthanan Sutenan</h1>
+            <img id="profileAvatar" src="./images/profile.jpg" alt="Natthanan Sutenan" class="profile-img">
+
+            <div class="links" id="profileLinks">
+                <!-- Links rendered automatically from js/data.js -->
+            </div>
+
+            <p class="bio" id="profileBio" data-original="Bio text">
+                <!-- Bio rendered automatically from js/data.js -->
+            </p>
+        </header>
+
+        <main>
+            <h2 class="section-title" id="projects" data-original="Projects">Projects</h2>
+
+            <!-- Projects rendered automatically from js/data.js -->
+            <div id="projectsList"></div>
+
+            <!-- LOAD MORE PROJECTS BUTTON -->
+            <div id="loadMoreContainer" class="load-more-container" style="display: none;">
+                <button id="loadMoreBtn" class="load-more-btn" type="button">
+                    <span>ดูโปรเจกต์เพิ่มเติม</span>
+                    <span id="loadMoreCounter" class="load-more-counter"></span>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p id="footerText" data-original="© 2026 Natthanan Sutenan. Built with Clean HTML & CSS & JavaScript.">
+                <!-- Footer text rendered automatically from js/data.js -->
+            </p>
+        </footer>
+    </div>
+
+    <!-- ROOT CONTAINER FOR RETRO EASTER EGG WIDGETS -->
+    <div id="widgetsRoot"></div>
+
+    <!-- MYSTERIOUS EASTER EGG TOGGLE BUTTON (ปุ่มวงกลมปริศนา) -->
+    <div id="retroToggleContainer" class="retro-toggle-container">
+        <button id="retroToggleBtn" class="retro-circle-btn" type="button" aria-label="Anomaly Protocol" title="Anomaly Protocol (?)">
+            <span class="retro-circle-dot"></span>
+        </button>
+    </div>
+
+    <!-- SCRIPTS -->
+    <!-- 1. ข้อมูลทั้งหมดอยู่ที่นี่ แก้ไขง่ายสุดๆ -->
+    <script src="js/data.js"></script>
+    <!-- 2. ดึงข้อมูลไปแสดงผล -->
+    <script src="js/render.js"></script>
+    <!-- 3. ระบบซูมดูรูปภาพแบบ Google Drive Lightbox -->
+    <script src="js/lightbox.js"></script>
+    <!-- 4. ลูกเล่น Retro 666 Popups -->
+    <script src="js/easter-egg.js"></script>
+</body>
+
+</html>
