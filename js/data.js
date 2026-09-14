@@ -64,6 +64,11 @@ const portfolioData = {
                     badgeImg: "https://img.shields.io/badge/Google_Sheets-Project_Data-34A853?style=flat&logo=googlesheets&logoColor=white"
                 },
                 {
+                    label: "Google Docs",
+                    url: "https://docs.google.com/document/d/1cZbiwQX0repsOpd4UZcHQe9FWEaX-IQx/edit?usp=sharing&ouid=108248227997456208166&rtpof=true&sd=true",
+                    badgeImg: "https://img.shields.io/badge/Google_Docs-Documentation-4285F4?style=flat&logo=googledocs&logoColor=white"
+                },
+                {
                     label: "Figma Prototype",
                     url: "https://www.figma.com/proto/nbFCPlW680pNJd8oofRGqC/Markudhet--Copy-?node-id=0-1&t=EECloplpMuSPcSwR-1",
                     badgeImg: "https://img.shields.io/badge/Figma-Prototype-000000?style=flat&logo=figma&logoColor=white"
