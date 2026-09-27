@@ -132,6 +132,70 @@ h1.name {
     text-decoration: underline;
 }
 
+.link-menu {
+    display: inline-block;
+    position: relative;
+    margin: 0 0.35rem;
+    vertical-align: baseline;
+}
+
+.link-menu summary {
+    color: var(--primary);
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+}
+
+.link-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.link-menu summary::after {
+    content: ' ▾';
+}
+
+.link-menu[open] summary::after {
+    content: ' ▴';
+}
+
+.link-menu summary:hover {
+    text-decoration: underline;
+}
+
+.link-menu summary:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+.link-menu-options {
+    position: absolute;
+    z-index: 20;
+    top: calc(100% + 0.4rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 175px;
+    padding: 0.35rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    text-align: left;
+}
+
+.link-menu-options a {
+    display: block;
+    margin: 0;
+    padding: 0.4rem 0.55rem;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.link-menu-options a:hover,
+.link-menu-options a:focus-visible {
+    background: var(--bg);
+}
+
 .bio {
     color: var(--text-muted);
     max-width: 600px;
@@ -270,6 +334,12 @@ ul.project-bullets li,
 .project-gallery .project-media:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+#internship-screening-agent .project-gallery .project-media {
+    height: 320px;
+    object-fit: contain;
+    background-color: #17151e;
 }
 
 .gallery-caption {
@@ -782,5 +852,3 @@ footer {
     .lightbox-nav-btn.prev { left: 10px; }
     .lightbox-nav-btn.next { right: 10px; }
 }
-
-

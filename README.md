@@ -24,12 +24,16 @@ PF/
 │   ├── profile.jpg         # รูปโปรไฟล์ของคุณ
 │   └── projects/           # 💻 โฟลเดอร์เก็บรูป/GIF ของผลงานโปรเจกต์ (แยกตามโฟลเดอร์)
 │       ├── markudhet/
+│       ├── internship-screening-agent/
 │       ├── picow-automation/
 │       └── room-reservation/
 │
 └── pdf/
-    └── resume.pdf          # ไฟล์ Resume PDF ของคุณ
+    ├── resume_QA.pdf        # Resume สาย QA / Testing
+    └── resume_AI_Agent.pdf  # Resume สาย AI Agent
 ```
+
+ลิงก์ **Resume** บนหน้าเว็บเป็นเมนูให้ผู้ชมเลือกเปิด PDF ทั้งสองฉบับในแท็บใหม่ ปรับชื่อและพาธของแต่ละฉบับได้ใน `profile.links` ของ `js/data.js`
 
 ---
 

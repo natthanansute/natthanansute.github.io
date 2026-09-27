@@ -24,8 +24,10 @@ const portfolioData = {
         links: [
             {
                 title: "Resume",
-                url: "pdf/resume.pdf",     // เปลี่ยนลิงก์ไฟล์ Resume ของคุณ (วางไฟล์ใน pdf/resume.pdf)
-                target: "_blank"
+                options: [
+                    { title: "QA / Testing", url: "pdf/resume_QA.pdf" },
+                    { title: "AI Agent", url: "pdf/resume_AI_Agent.pdf" }
+                ]
             },
             {
                 title: "LinkedIn",
@@ -133,6 +135,48 @@ const portfolioData = {
                 "./images/projects/room-reservation/WebappStd2.gif"
             ],
             imageAlt: "Room Reservation System"
+        },
+        {
+            id: "internship-screening-agent",
+            title: "Ai-Assisted Internship Screening Agent",
+            badges: [
+                {
+                    label: "Private Project",
+                    url: "#projects",
+                    badgeImg: "https://img.shields.io/badge/Status-Private_Project-orange?style=flat&labelColor=grey"
+                }
+            ],
+            description: "An AI-assisted agent that collects internship posts from Facebook groups, screens text and poster images, and delivers relevant opportunities through a Telegram bot.",
+            bullets: [
+                "Built a Python and Playwright pipeline to collect internship posts and store their processing status in SQLite.",
+                "Used Gemini to analyze post text and images, prioritizing QA / Testing roles while categorizing Cloud & DevOps, Cybersecurity, and AI & Data opportunities.",
+                "Developed Telegram commands for role-based results, scan status, and manual review of posts with insufficient evidence.",
+                "Added duplicate detection, retry handling, and scheduled scans with GitHub Actions."
+            ],
+            images: [
+                {
+                    url: "./images/projects/internship-screening-agent/telegram-results.png",
+                    alt: "Telegram summary of internship screening results",
+                    caption: "Internship results"
+                },
+                {
+                    url: "./images/projects/internship-screening-agent/telegram-commands-status.png",
+                    alt: "Telegram bot commands and screening status",
+                    caption: "Bot commands and status"
+                },
+                {
+                    url: "./images/projects/internship-screening-agent/scan-progress.png",
+                    alt: "Scheduled scan progress and run summary in Telegram",
+                    caption: "Scan progress"
+                },
+                {
+                    url: "./images/projects/internship-screening-agent/manual-review.png",
+                    alt: "Telegram manual review queue for uncertain internship posts",
+                    caption: "Manual review queue"
+                }
+            ],
+            galleryColumns: 2,
+            imageAlt: "Ai-Assisted Internship Screening Agent"
         }
         /*
         // ตัวอย่างการเพิ่มโปรเจกต์ที่ 3 (เอาเครื่องหมายคอมเมนต์ออกแล้วแก้ไขได้เลย):
@@ -180,7 +224,6 @@ const portfolioData = {
     // ข้อความส่วนท้าย (Footer)
     // --------------------------------------------------
     footer: {
-        text: "© 2026 Natthanan Sutenan. Built with Clean HTML & CSS & JavaScript.(By Gemini 3.8 Flash)"
+        text: "© 2026 Natthanan Sutenan. Built with Clean HTML & CSS & JavaScript."
     }
 };
-

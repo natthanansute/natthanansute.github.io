@@ -107,7 +107,13 @@ function renderProfile(profile) {
     if (linksEl && Array.isArray(profile.links)) {
         linksEl.innerHTML = profile.links.map((link, idx) => {
             const separator = idx < profile.links.length - 1 ? ' | ' : '';
-            return `<a href="${link.url}" target="${link.target || '_blank'}">${link.title}</a>${separator}`;
+            if (Array.isArray(link.options) && link.options.length > 0) {
+                const optionsHtml = link.options.map(option =>
+                    `<a href="${escapeHtml(option.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(option.title)}</a>`
+                ).join('');
+                return `<details class="link-menu"><summary>${escapeHtml(link.title)}</summary><div class="link-menu-options">${optionsHtml}</div></details>${separator}`;
+            }
+            return `<a href="${escapeHtml(link.url)}" target="${escapeHtml(link.target || '_blank')}" rel="noopener noreferrer">${escapeHtml(link.title)}</a>${separator}`;
         }).join('');
     }
 
